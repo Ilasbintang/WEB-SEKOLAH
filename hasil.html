@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Kelulusan - SMA Negeri 1 Tongkuno</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="d.css">
+   
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="Cuplikan layar 2026-04-29 005420.png" alt="Logo">
+            <h2>SURAT KETERANGAN LULUS</h2>
+            <p style="color: #64748b; margin: 0;">SMA Negeri 1 Tongkuno</p>
+        </div>
+
+        <table class="detail-siswa">
+            <tr>
+                <td class="label">Nama Lengkap</td>
+                <td id="resNama">-</td>
+            </tr>
+            <tr>
+                <td class="label">NISN</td>
+                <td id="resNISN">-</td>
+            </tr>
+            <tr>
+                <td class="label">Tahun Pelajaran</td>
+                <td>2025/2026</td>
+            </tr>
+        </table>
+
+        <div id="resStatusBox" class="status-box">
+            Dinyatakan: <span id="resStatus">-</span>
+        </div>
+
+        <p id="resPesan" style="text-align: center; color: #64748b; font-size: 14px; line-height: 1.6;"></p>
+
+        <div class="btn-action">
+            <button onclick="window.print()" class="btn btn-print">
+                <i class="fas fa-print"></i> Cetak Hasil
+            </button>
+            <a href="index.html" class="btn btn-back">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </a>
+        </div>
+    </div>
+    <script src="d.js"></script>
+</body>
+</html>

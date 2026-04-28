@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Kelulusan - SMA Negeri 1 Tongkuno</title>
+    <link rel="stylesheet" href="p.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+
+    <div class="card">
+        <img src="Cuplikan layar 2026-04-29 005420.png" alt="Logo">
+        <h2>Pengumuman Kelulusan</h2>
+        <h2>Siswa Kelas XII</h2>
+        <h3 class="blue-text">SMA Negeri 1 Tongkuno</h3>
+        <p>Tahun Pelajaran 2025/2026</p>
+        
+        <div class="info-box">
+            Gunakan <b>NISN</b> sebagai Username dan <b>NIPD</b> sebagai Password.
+        </div>
+
+        <form id="formLogin">
+            <div class="input-group">
+                <label style="font-size: 12px; font-weight: 600;">NISN</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="inputNISN" placeholder="Masukkan NISN" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>NIPD <span class="label-hint">(Password)</span></label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock icon-left"></i>
+                    
+                    <input type="password" id="inputNIPD" placeholder="Masukkan NIPD">
+                    
+                    <i class="fas fa-eye icon-right" id="togglePassword" onclick="toggleView()"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-login">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+        </form>
+    </div>
+
+    <script src="p.js"></script>
+</body>
+</html>

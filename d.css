@@ -1,0 +1,154 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Inter', Tahoma, sans-serif;
+}
+
+body {
+    background-color: #738cc9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Card Container */
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-top: 8px solid #2563eb; /* Aksen biru seperti login card */
+}
+
+/* Header Style */
+.header {
+    text-align: center;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 1.4rem;
+    color: #1e293b;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.header p {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Tabel Detail Siswa */
+.detail-siswa {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.detail-siswa td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.detail-siswa .label {
+    font-weight: 600;
+    color: #1e293b;
+    width: 35%;
+}
+
+/* Status Badge Box */
+.status-box {
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.lulus {
+    background-color: #eff6ff; /* Senada dengan info-box login */
+    color: #1e40af;
+    border: 1px solid #dbeafe;
+}
+
+.tidak-lulus {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fee2e2;
+}
+
+/* Pesan Tambahan */
+#resPesan {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Button Group */
+.btn-action {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-print {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-print:hover {
+    background: #1d4ed8;
+}
+
+.btn-back {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.btn-back:hover {
+    background: #e2e8f0;
+}
+
+/* Print Mode Optimization */
+@media print {
+    .btn-action {
+        display: none;
+    }
+    body {
+        background: white;
+        padding: 0;
+    }
+    .container {
+        box-shadow: none;
+        border: none;
+        max-width: 100%;
+    }
+}
