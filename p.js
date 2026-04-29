@@ -3,7 +3,7 @@
             "01001001": { nama: "Budi Santoso", nipd: "12345", status: "LULUS" },
             "01001002": { nama: "Siti Aminah", nipd: "67890", status: "LULUS" },
             "01001003": { nama: "Andi Wijaya", nipd: "11223", status: "TIDAK LULUS" },
-            "01001004": { nama: "Akmal", nipd: "12344", status: "TIDAK LULUS" }
+            "01001004": { nama: "akmal", nipd: "22-12-2005", status: "TIDAK LULUS" }
         };
 
         // 2. FUNGSI LIHAT PASSWORD
