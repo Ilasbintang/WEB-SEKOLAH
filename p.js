@@ -190,7 +190,7 @@
                 window.location.href = 'hasil.html'; 
 
             } else {
-                alert("Password (TanggaL Lahir Salah) Salah!");
+                alert("Password (TanggaL Lahir) Salah!");
             }
         } else {
             alert("NISN Tidak Terdaftar!");
