@@ -138,7 +138,6 @@
             "0076537051": { nama: "La Ali", nipd: "30-06-2007", status: "LULUS" },
             "0087865541": { nama: "La Ode Akbar", nipd: "21-09-2008", status: "LULUS" },
             "0079401358": { nama: "La Ode Muhamad Alim", nipd: "12-02-2007", status: "LULUS" },
-            "0078127879": { nama: "Nuraya", nipd: "25-01-2008", status: "LULUS" },
             "0088463540": { nama: "RISKY ALFATTAH", nipd: "27-12-2008", status: "LULUS" },
             "0088852479": { nama: "Shiren Dwianti", nipd: "10-10-2008", status: "LULUS" },
             "0088681752": { nama: "Sulfi", nipd: "11-07-2008", status: "LULUS" },
