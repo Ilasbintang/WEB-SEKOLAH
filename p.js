@@ -18,9 +18,8 @@
             "0087227110": { nama: "JIHAN IRMA SAKTI", nipd: "09-10-2008", status: "LULUS" },
             "0073205758": { nama: "KENDI", nipd: "03-06-2007", status: "LULUS" },
             "0079141143": { nama: "LA ODE DARMIN", nipd: "14-06-2007", status: "LULUS" },
-            "0099276301": { nama: "LA ODE MUHAMMAD FUAD NAADHIR", nipd: "07-07-2009", status: "LULUS" },
+            "0099276301": { nama: "LA ODE MUHAMMAD FUAD NAADHIR AMRULLA", nipd: "07-07-2009", status: "LULUS" },
             "0087674429": { nama: "MUHAMAD RIFALDY", nipd: "05-01-2008", status: "LULUS" },
-            "0087104977": { nama: "NOVY WULANDINI", nipd: "17-11-2008", status: "LULUS" },
             "0076195492": { nama: "NUNING", nipd: "07-02-2007", status: "LULUS" },
             "0074194828": { nama: "NUR RAHMADHANI", nipd: "23-12-2007", status: "LULUS" },
             "0085490344": { nama: "NURLAILA AFIT", nipd: "28-05-2008", status: "LULUS" },
@@ -90,7 +89,6 @@
             "0081293162": { nama: "NUR ANISA SAIDI", nipd: "31-08-2009", status: "LULUS" },
             "0072829406": { nama: "NURIANTI LAODE", nipd: "03-08-2007", status: "LULUS" },
             "0076266128": { nama: "Raya", nipd: "07-03-2007", status: "LULUS" },
-            "0082248093": { nama: "RENO SAPUTRA", nipd: "02-05-2008", status: "LULUS" },
             "0076015670": { nama: "SABRINA", nipd: "15-12-2007", status: "LULUS" },
             "0083365648": { nama: "SAFAR MAHARDIKA", nipd: "21-08-2008", status: "LULUS" },
             "0076337283": { nama: "Siti Salfiah", nipd: "18-03-2007", status: "LULUS" },
@@ -124,10 +122,8 @@
             "0082520442": { nama: "Rifky", nipd: "13-05-2008", status: "LULUS" },
             "0086247863": { nama: "Rijal", nipd: "11-11-2008", status: "LULUS" },
             "0083765328": { nama: "TRIVEN KATARINA", nipd: "25-11-2008", status: "LULUS" },
-            "0075200191": { nama: "ALDIYANSHA", nipd: "06-11-2007", status: "LULUS" },
+            "0075200191": { nama: "ALDIYANSHA", nipd: "06-12-2007", status: "LULUS" },
             "3031449944": { nama: "ASRABIUL SAPUTRA", nipd: "29-03-2008", status: "LULUS" },
-            "0075863069": { nama: "Darmawan", nipd: "16-06-2007", status: "LULUS" },
-            "0014403594": { nama: "DEOS RINO", nipd: "10-10-2007", status: "LULUS" },
             "0086077567": { nama: "DEWI HABSYAH AULIA", nipd: "14-12-2009", status: "LULUS" },
             "0083235417": { nama: "EMILIA SUSANA", nipd: "24-08-2008", status: "LULUS" },
             "0087224157": { nama: "FARID", nipd: "05-06-2008", status: "LULUS" },
@@ -138,7 +134,6 @@
             "0076537051": { nama: "La Ali", nipd: "30-06-2007", status: "LULUS" },
             "0087865541": { nama: "La Ode Akbar", nipd: "21-09-2008", status: "LULUS" },
             "0079401358": { nama: "La Ode Muhamad Alim", nipd: "12-02-2007", status: "LULUS" },
-            "0088463540": { nama: "RISKY ALFATTAH", nipd: "27-12-2008", status: "LULUS" },
             "0088852479": { nama: "Shiren Dwianti", nipd: "10-10-2008", status: "LULUS" },
             "0088681752": { nama: "Sulfi", nipd: "11-07-2008", status: "LULUS" },
             "0078155927": { nama: "Wa Ode Asa", nipd: "02-06-2007", status: "LULUS" },
@@ -223,3 +218,45 @@
 
         });
 
+        // 1. Tentukan waktu target dalam WITA (UTC+8)
+// Format: Tahun, Bulan (0-11), Tanggal, Jam, Menit, Detik
+const targetDate = new Date('2026-05-05T14:00:00+08:00'); 
+const waktuTarget = targetDate.getTime();
+
+function updateCountdown() {
+    // 2. Ambil waktu sekarang (selalu dalam UTC secara internal)
+    const sekarang = new Date().getTime();
+    const selisih = waktuTarget - sekarang;
+
+    const formLogin = document.getElementById('formLogin');
+    const infoBox = document.querySelector('.info-box');
+    const countdownContainer = document.getElementById('countdown-container');
+
+    // 3. Logika Tampilan
+    if (selisih > 0) {
+        // BELUM WAKTUNYA: Sembunyikan form, tampilkan timer
+        if (formLogin) formLogin.style.display = 'none';
+        if (infoBox) infoBox.style.display = 'none';
+        if (countdownContainer) countdownContainer.style.display = 'block';
+
+        const d = Math.floor(selisih / (1000 * 60 * 60 * 24));
+        const h = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((selisih % (1000 * 60)) / 1000);
+
+        // Update angka ke HTML
+        document.getElementById('days').innerText = d.toString().padStart(2, '0');
+        document.getElementById('hours').innerText = h.toString().padStart(2, '0');
+        document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
+        document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+    } else {
+        // SUDAH WAKTUNYA: Tampilkan form login
+        if (formLogin) formLogin.style.display = 'block';
+        if (infoBox) infoBox.style.display = 'block';
+        if (countdownContainer) countdownContainer.style.display = 'none';
+    }
+}
+
+// Jalankan interval
+setInterval(updateCountdown, 1000);
+updateCountdown();

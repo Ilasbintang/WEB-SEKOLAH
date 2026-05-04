@@ -22,6 +22,20 @@
             Gunakan <b>NISN</b> sebagai Username dan <b>Tanggal Lahir</b> sebagai Password.
         </div>
 
+        <!-- Tambahkan di dalam <div class="card"> sebelum <form id="formLogin"> -->
+            <div id="countdown-container" style="display: none;">
+                <p style="color: #eab308; font-weight: 600; margin-bottom: 10px;">Pengumuman Dimulai</p>
+                <p id="jadwal-tampil" style="font-size: 14px; margin-bottom: 20px;">Selasa, 5 Mei 2026 • 14:00 WITA</p>
+                
+                <div class="timer-grid">
+                    <div class="timer-box"><span id="days">00</span><small>Hari</small></div>
+                    <div class="timer-box"><span id="hours">00</span><small>Jam</small></div>
+                    <div class="timer-box"><span id="minutes">00</span><small>Menit</small></div>
+                    <div class="timer-box"><span id="seconds">00</span><small>Detik</small></div>
+                </div>
+                <p style="margin-top: 20px; font-size: 13px; color: #64748b;">Tunggu pengumuman resmi...</p>
+            </div>
+
         <form id="formLogin">
             <div class="input-group">
                 <label style="font-size: 12px; font-weight: 600;">NISN</label>
